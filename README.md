@@ -8,3 +8,4 @@ cd /path/to/nfwai/
 conda env create -f environment.yml
 conda activate nfwai
 ```
+Скачать большие файлы можн через data.torrent

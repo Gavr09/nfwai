@@ -4,7 +4,6 @@ NoFireWithAI: прогнозирование степени пожароопас
 
 Чтобы построить conda env:
 ```
-conda activate base
 cd /path/to/nfwai/
 conda env create -f environment.yml
 conda activate nfwai

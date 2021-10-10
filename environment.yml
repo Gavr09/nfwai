@@ -10,6 +10,7 @@ dependencies:
   - argcomplete=1.12.3=pyhd8ed1ab_2
   - argon2-cffi=20.1.0=py37h5e8e339_2
   - async_generator=1.10=py_0
+  - atk-1.0=2.36.0=h3371d22_4
   - attrs=21.2.0=pyhd8ed1ab_0
   - babel=2.9.1=pyh44b312d_0
   - backcall=0.2.0=pyh9f0ad1d_0
@@ -20,10 +21,10 @@ dependencies:
   - brotlipy=0.7.0=py37h5e8e339_1001
   - bzip2=1.0.8=h7f98852_4
   - c-ares=1.17.2=h7f98852_0
-  - ca-certificates=2021.5.30=ha878542_0
+  - ca-certificates=2021.10.8=ha878542_0
   - cairo=1.16.0=h6cf1ce9_1008
   - cartopy=0.19.0.post1=py37h0c48da3_1
-  - certifi=2021.5.30=py37h89c1867_0
+  - certifi=2021.10.8=py37h89c1867_0
   - cffi=1.14.6=py37h036bc23_1
   - cfgrib=0.9.9.0=pyhd8ed1ab_1
   - cfitsio=3.470=hb418390_7
@@ -43,11 +44,19 @@ dependencies:
   - entrypoints=0.3=pyhd8ed1ab_1003
   - expat=2.4.1=h9c3ff4c_0
   - fiona=1.8.18=py37h17d6ad9_1
+  - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
+  - font-ttf-inconsolata=3.000=h77eed37_0
+  - font-ttf-source-code-pro=2.038=h77eed37_0
+  - font-ttf-ubuntu=0.83=hab24e00_0
   - fontconfig=2.13.1=hba837de_1005
+  - fonts-conda-ecosystem=1=0
+  - fonts-conda-forge=1=0
   - freetype=2.10.4=h0708190_1
   - freexl=1.0.6=h7f98852_0
+  - fribidi=1.0.10=h36c2ea0_0
   - future=0.18.2=py37h89c1867_3
   - gdal=3.2.1=py37hc5bc4e4_7
+  - gdk-pixbuf=2.42.6=h04a7f16_0
   - geojson=2.5.0=py_0
   - geopandas=0.9.0=pyhd8ed1ab_1
   - geopandas-base=0.9.0=pyhd8ed1ab_1
@@ -57,8 +66,13 @@ dependencies:
   - giflib=5.2.1=h36c2ea0_2
   - glib=2.68.4=h9c3ff4c_1
   - glib-tools=2.68.4=h9c3ff4c_1
+  - graphite2=1.3.13=h58526e2_1001
+  - graphviz=2.49.0=h85b4f2f_0
   - gst-plugins-base=1.18.5=hf529b03_0
   - gstreamer=1.18.5=h76c114f_0
+  - gtk2=2.24.33=h539f30e_1
+  - gts=0.7.6=h64030ff_2
+  - harfbuzz=3.0.0=h83ec7ef_1
   - hdf4=4.2.15=h10796ff_3
   - hdf5=1.10.6=nompi_h6a2412b_1114
   - icu=68.1=h58526e2_0
@@ -102,6 +116,7 @@ dependencies:
   - libevent=2.1.10=h9b69904_4
   - libffi=3.4.2=h9c3ff4c_4
   - libgcc-ng=11.2.0=h1d223b6_9
+  - libgd=2.3.2=h78a0170_0
   - libgdal=3.2.1=h38ff51b_7
   - libgfortran-ng=11.2.0=h69a702a_9
   - libgfortran5=11.2.0=h5c6108e_9
@@ -117,6 +132,7 @@ dependencies:
   - libpng=1.6.37=h21135ba_2
   - libpq=13.3=hd57d9b9_1
   - libprotobuf=3.16.0=h780b84a_0
+  - librsvg=2.52.1=hc3c00ef_0
   - librttopo=1.1.0=h1185371_6
   - libsodium=1.0.18=h36c2ea0_1
   - libspatialindex=1.9.3=h9c3ff4c_4
@@ -124,9 +140,11 @@ dependencies:
   - libssh2=1.10.0=ha56f1ee_2
   - libstdcxx-ng=11.2.0=he4da1e4_9
   - libtiff=4.2.0=hbd63e13_2
+  - libtool=2.4.6=h9c3ff4c_1008
   - libuuid=2.32.1=h7f98852_1000
   - libvorbis=1.3.7=h9c3ff4c_0
-  - libwebp-base=1.2.1=h7f98852_0
+  - libwebp=1.2.0=h3452ae3_0
+  - libwebp-base=1.2.0=h7f98852_2
   - libxcb=1.13=h7f98852_1003
   - libxkbcommon=1.0.3=he3ba5ed_0
   - libxml2=2.9.12=h72842e0_0
@@ -161,6 +179,7 @@ dependencies:
   - pandas=1.1.5=py37hdc94413_0
   - pandoc=2.14.2=h7f98852_0
   - pandocfilters=1.5.0=pyhd8ed1ab_0
+  - pango=1.48.10=h54213e6_2
   - parso=0.8.2=pyhd8ed1ab_0
   - pcre=8.45=h9c3ff4c_0
   - pexpect=4.8.0=pyh9f0ad1d_2
@@ -193,6 +212,7 @@ dependencies:
   - python=3.7.10=hb7a2778_102_cpython
   - python-dateutil=2.8.2=pyhd8ed1ab_0
   - python-eccodes=2021.03.0=py37h6f94858_1
+  - python-graphviz=0.17=pyhaef67bd_0
   - python_abi=3.7=2_cp37m
   - pytorch=1.9.0=cpu_py37hb06efa0_2
   - pytz=2021.3=pyhd8ed1ab_0
@@ -261,7 +281,6 @@ dependencies:
     - py==1.10.0
     - pytest==6.2.5
     - pytest-sugar==0.9.4
-    - python-graphviz==0.17
     - soupsieve==2.2.1
     - tenacity==8.0.1
     - termcolor==1.1.0

@@ -6,6 +6,7 @@ import torch.nn as nn
 import geopandas as gpd
 import cfgrib
 import helpers
+import xarray
 
 
 def prepare_cities(path_to_input, lat_min, lat_max, lon_min, lon_max, step):
@@ -54,8 +55,10 @@ def parse_cube(ds):
 
 
 def save_to_tensors(ds, path_to_pooling, file_name):
-    for ds_part in ds:
-        for feature_name in ds_part.keys():
+    ds_gen = (x for x in ds)
+    for ds_part in ds_gen:
+        feat_name_gen = (x for x in ds_part.keys())
+        for feature_name in feat_name_gen:
             feat_tensor = feat_to_tensor(ds_part[feature_name].data)
             make_max_pool_feats(feat_tensor, path_to_pooling, file_name, feature_name)
             make_avg_pool_feats(feat_tensor, path_to_pooling, file_name, feature_name)
@@ -67,6 +70,7 @@ def feat_to_tensor(feat_numpy):
     feat_tensor = torch.from_numpy(feat_numpy).unsqueeze(1)
     feat_tensor = nn.functional.pad(feat_tensor, (0, 0, 1, 0), mode="replicate")
     feat_tensor = torch.flip(feat_tensor, [2])
+    print('feat_to_tensor')
     return feat_tensor
 
 
@@ -88,6 +92,7 @@ def make_max_pool_feats(feat_tensor, path_to_pooling, file_name, feat_name):
         os.path.join(path_to_pooling, f"{file_name}_max_pool_{feat_name}.pt"),
     )
     del feat_tensor
+
 
 
 def make_pool_features(path_to_gribs, file_name, path_to_pooling):

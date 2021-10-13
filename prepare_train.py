@@ -205,11 +205,11 @@ def add_russia_flag_to_point(df, borders):
 def make_train(path, array_of_lons, array_of_lats, step, start_date):
     # Подготавливаем сырые данные от МЧС/ Создаем границы для точки пожара с шагом 0.2
     targets = load_and_prepare_targets(path)
-
+    print('targets =')
     # Создаем ячейки для сетки с шагом 0.2 на 0.2, добавляем grid_index, добавляем флаг суша/не суша
     # Считаем за сушу те ячейки, которые когда-либо горели
     grid_df = make_and_prepare_grid_df(targets, array_of_lons, array_of_lats, step)
-
+    print('grid_df =')
     # Объединяем ячейки на суше с таргетами, берем все пожары и случайно те даты, в которых не было пожаров
     df_is_land = make_df_only_land(grid_df, targets, start_date)
 
@@ -221,7 +221,7 @@ def make_train(path, array_of_lons, array_of_lats, step, start_date):
         .sort_values(by=["grid_index", "dt"])
         .reset_index(drop=True)
     )
-
+    print('df_not_land =')
     # Убираем ячейки не из России
     country = CountryInfo("Russia")
     russia = country.geo_json()
